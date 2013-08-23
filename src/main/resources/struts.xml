@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+  
+	<!--    
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	-->
+
+	<package name="basicstruts2" extends="struts-default">
+
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+		
+		
+	  <action name="recoverpassword" class="edu.ku.it.si.struts2securityvulnerability.security.action.RecoverPassword" method="execute">
+		<result name="success">/forgotpasswordsuccess.jsp</result>
+		<result name="input">/forgotpassword.jsp</result>
+	  </action>
+	  
+	  <action name="changepassword" class="edu.ku.it.si.struts2securityvulnerability.security.action.ChangePassword" method="execute">
+		<result name="success">/changepasswordsuccess.jsp</result>
+		<result name="input">/changepassword.jsp</result>
+	  </action>
+
+	</package>
+
+</struts>
